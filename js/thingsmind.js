@@ -1,40 +1,33 @@
 /**
  * Created by VST on 31-10-2016.
  */
-$('.button-collapse').sideNav({
-        menuWidth: 300, // Default is 240
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-);
-$('.collapsible').collapsible();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
+
 var leftmenus = [".device-listing", ".device-monitoring", ".device-location", ".management-device", ".management-controlpanel",
-    ".management-monitoring", ".management-alarms", ".management-firmware", ".integration-listing"];
+    ".management-monitoring", ".management-alarms", ".management-firmware", ".integration-listing", ".edit-device", ".one-device",
+    ".one-device-info", ".one-device-child", ".one-device-healthcheck", ".one-device-monitor"];
 
 $(document).ready(function(){
-    leftmenus.forEach(function(entry) {
-        var viewname = entry + "-view";
-        $(viewname).hide();
-    });
-});
+    $('.button-collapse').sideNav({
+            menuWidth: 240 // Default is 240
+        }
+    );
+    $('.collapsible').collapsible();
 
-$(document).ready(function(){
+    hideAll(leftmenus);
+
     leftmenus.forEach(function(entry) {
         $(entry).click(function() {
+            hideAll(leftmenus);
             var viewname = entry + "-view";
-            showOnlyThisDiv(viewname);
+            $(viewname).show();
         });
     });
 });
 
-function showOnlyThisDiv(divname) {
-    leftmenus.forEach(function(entry) {
+function hideAll(menus) {
+    menus.forEach(function(entry) {
         var viewname = entry + "-view";
-
-        if (viewname != divname) {
-            $(viewname).hide();
-        }
+        $(viewname).hide();
     });
-    $(divname).show();
 }
 

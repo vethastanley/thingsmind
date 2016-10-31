@@ -13,17 +13,12 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/thingsmind.js"></script>
-    <script type="text/javascript">//<![CDATA[
-    window.onload=function(){
-        $('.button-collapse').sideNav({
-                    menuWidth: 240 // Default is 240
-                }
-        );
-        $('.collapsible').collapsible();
-
-    }//]]>
-
-    </script>
+    <script src="js/charts.js"></script>
+    <script src="js/init.js"></script>
+    <!--<script src="js/highcharts.js"></script>
+    <script src="js/highcharts-more.js"></script>
+    <script src="js/solid-gauge.js"></script>
+    <script src="js/exporting.js"></script>-->
 </head>
 <body>
 <!-- Left Navigation and Header -->
@@ -81,86 +76,241 @@
 
 <!-- Device View -->
 <div class="row thingsmind-container">
-<div class="col s12 device-listing-view">
-    <div>
-        <ul class="tabs">
-            <li class="tab"><a href="#test1">Device Info</a></li>
-            <li class="tab"><a class="active" href="#test2">Child Devices</a></li>
-            <li class="tab"><a href="#test3">Health Check</a></li>
-            <li class="tab"><a href="#test4">Monitoring</a></li>
-        </ul>
-    </div>
-    <div id="test1">Test 1</div>
-    <div id="test2">Test 2</div>
-    <div id="test3">Test 3</div>
-    <div id="test4">Test 4</div>
-</div>
 
-<div class="col s12 device-monitoring-view">
-    This is device-monitoring view............................................................................
-</div>
+    <!-- Device Listing View -->
+    <div class="col s12 device-listing-view">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="header">Devices</h3>
+            </div>
+            <div class="col s10 center-align">
+                <table class="devices-table highlight">
+                    <thead>
+                    <tr>
+                        <th data-field="id">IoT Device</th>
+                        <th data-field="name">ItemId</th>
+                        <th data-field="price">Status</th>
+                        <th data-field="view">View</th>
+                    </tr>
+                    </thead>
 
-<div class="col s12 device-location-view">
-    This is device-location ................................................................................
-</div>
-
-<div class="col s12 management-device-view">
-    <div class="row">
-        <div class="col s12">
-            <h3 class="header">Device Type</h3>
-        </div>
-        <div class="col s10 center-align">
-            <table>
-                <thead>
-                <tr>
-                    <th data-field="id">Name</th>
-                    <th data-field="name">Item Name</th>
-                    <th data-field="price">Item Price</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td>Alvin</td>
-                    <td>Eclair</td>
-                    <td>$0.87</td>
-                </tr>
-                <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                </tr>
-                <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                </tr>
-                </tbody>
-            </table>
+                    <tbody>
+                    <tr >
+                        <td>ParkingPi BazullahRd</td>
+                        <td>WAHGE72</td>
+                        <td><i class="material-icons" style="color: green">done</i></td>
+                        <td><a href="#!" class="one-device"><i class="material-icons">visibility</i></a></td>
+                    </tr>
+                    <tr class="BoagRd">
+                        <td>ParkingPi BoagRd</td>
+                        <td>JAHDV12</td>
+                        <td><i class="material-icons" style="color: green">done</i></td>
+                        <td><a href="#!" class="one-device"><i class="material-icons">visibility</i></a></td>
+                    </tr>
+                    <tr class="Kellys">
+                        <td>ParkingPi Kellys</td>
+                        <td>SHDVB31</td>
+                        <td><i class="material-icons" style="color: red">trending_down</i></td>
+                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="col s12 management-controlpanel-view">
-    This is management-controlpanel view.............................................................
-</div>
+    <!-- One Device view -->
+    <div class="col s12 one-device-view">
+        <div>
+            <ul class="tabs">
+                <li class="tab"><a class="active one-device-info">Device Info</a></li>
+                <li class="tab"><a class="one-device-child" >Child Devices</a></li>
+                <li class="tab"><a class="one-device-healthcheck">Health Check</a></li>
+                <li class="tab"><a class="one-device-monitor">Monitoring</a></li>
+            </ul>
+        </div>
 
-<div class="col s12 management-monitoring-view">
-    This is management-monitoring view................................................................................
-</div>
+    </div>
 
-<div class="col s12 management-alarms-view">
-    This is management-alarms view..........................................
-</div>
+    <div id="one-device-info-view" style="display: none">Test 1</div>
+    <div id="one-device-child-view" style="display: none">Test 2</div>
+    <div id="one-device-healthcheck-view" style="display: none">Test 3</div>
+    <div id="one-device-monitor-view" style="display: none">Test 4</div>
 
-<div class="col s12 management-firmware-view">
-    This is management-firmware view................................................................................
-</div>
+    <div class="col s12 device-monitoring-view">
+<!--
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card medium">
+                    <div class="card-image">
+                        &lt;!&ndash; <img src="images/sample-1.jpg"> &ndash;&gt;
+                        <div style="width: 600px; height: 400px; margin: 0 auto">
+                            <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+                        </div>
+                        &lt;!&ndash; <span class="card-title">CPU Usage</span> &ndash;&gt;
+                    </div>
+                    &lt;!&ndash;<div class="card-content">
+                        <p>I can reboot your remote Raspberry PI device.</p>
+                    </div>&ndash;&gt;
+                    &lt;!&ndash; <div class="card-action">
+                      <a href="#">Reboot device</a>
+                    </div> &ndash;&gt;
+                </div>
+            </div>
+        </div>
 
-<div class="col s12 integration-listing-view">
-    This is integration-listing view....
-</div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card medium">
+                    <div class="card-image">
+                        &lt;!&ndash; <img src="images/sample-1.jpg"> &ndash;&gt;
+                        <div style="width: 600px; height: 400px; margin: 0 auto">
+                            <div id="container-rpm" style="width: 300px; height: 200px; float: left"></div>
+                        </div>
+                        &lt;!&ndash; <span class="card-title">Memory Usage</span> &ndash;&gt;
+                    </div>
+                    &lt;!&ndash;<div class="card-content">
+                        <p>I can reboot your remote Raspberry PI device.</p>
+                    </div>&ndash;&gt;
+                    &lt;!&ndash; <div class="card-action">
+                      <a href="#">Reboot device</a>
+                    </div> &ndash;&gt;
+                </div>
+            </div>
+        </div>-->
+    </div>
 
+    <div class="col s12 device-location-view">
+        <!--<iframe src="https://www.google.com/maps/d/embed?mid=1W-mTacrI-N1skRnuV6JKqbjjVjA" width="640" height="480"></iframe>-->
+    </div>
+
+    <div class="col s12 management-device-view">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="header">Device Type</h3>
+            </div>
+            <div class="col s12">&nbsp;</div>
+            <div class="col s12">
+                <ul class="collection">
+                    <li href="#!" class="collection-item">
+                        <div>
+                            Raspberry Pi
+                            <a href="#modal1" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            Cisco CRG1000 Series
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div></li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            WigWag IoT Gateway
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            L&T MCOMP
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            Siemens/RuggedCom WiMAX Solutions
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            Qualcomm GT202
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            BeagleBone Black
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            Bosh XDK110
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            ARM mbed
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                    <li href="#!" class="collection-item">
+                        <div>
+                            GE MDS SDX
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
+                            <a href="#!" class="secondary-content edit-device"><i class="material-icons">mode_edit</i></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination right">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Device Type -->
+    <div class="col s12 edit-device-view">
+        I am in the edit mide
+    </div>
+
+    <div class="col s12 management-controlpanel-view">
+        This is management-controlpanel view.............................................................
+    </div>
+
+    <div class="col s12 management-monitoring-view">
+        <!--<div class="row">
+            <div id="container-pie-current-status col s4" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            <div id="container-historical-cpu-usage col s4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        </div>-->
+    </div>
+
+    <div class="col s12 management-alarms-view">
+        This is management-alarms view..........................................
+    </div>
+
+    <div class="col s12 management-firmware-view">
+        This is management-firmware view................................................................................
+    </div>
+
+    <div class="col s12 integration-listing-view">
+        This is integration-listing view....
+    </div>
 </div>
 </body>
 </html>
