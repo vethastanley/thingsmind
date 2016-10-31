@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+
+    <title>ThingsMind</title>
+    <meta name="viewport" content="width=1800px, initial-scale=1">
+    <link href="css/materialize.css" rel="stylesheet" >
+    <link href="css/thingsmind.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/thingsmind.js"></script>
+    <script type="text/javascript">//<![CDATA[
+    window.onload=function(){
+        $('.button-collapse').sideNav({
+                    menuWidth: 240 // Default is 240
+                }
+        );
+        $('.collapsible').collapsible();
+    }//]]>
+
+    </script>
+</head>
+<body>
+<!-- Left Navigation and Header -->
+<nav class="blue">
+    <a href="#" id="logo-container"
+       class="brand-logo"><img src="img/logo.png" style="height: 55px; padding-left: 20px; padding-top: 10px"/></a>
+    <ul id="slide-out" class="side-nav fixed pull-nav-bar">
+        <!--<li class="bold"><a href="#!" class="waves-effect waves-teal">First Sidebar Link</a></li>
+        <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>-->
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect waves-teal active">Device
+                        <i class="material-icons">perm_device_information</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!"><i class="material-icons">view_list</i>Listing</a></li>
+                            <li><a href="#!"><i class="material-icons">equalizer</i>Monitoring</a></li>
+                            <li><a href="#!"><i class="material-icons">location_on</i>Locations</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-teal active">Management
+                        <i class="material-icons">settings</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!"><i class="material-icons">phonelink_setup</i>Device</a></li>
+                            <li><a href="#!"><i class="material-icons">perm_scan_wifi</i>Control Panel</a></li>
+                            <li><a href="#!"><i class="material-icons">assessment</i>Monitoring</a></li>
+                            <li><a href="#!"><i class="material-icons">add_alert</i>Alarms</a></li>
+                            <li><a href="#!"><i class="material-icons">shopping_basket</i>Firmware Repository</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect waves-teal active">Integration
+                        <i class="material-icons">call_made</i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="#!"><i class="material-icons">view_list</i>Listing</a></li>
+                            <li><a href="#!"><i class="material-icons">playlist_add</i>Add New</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <a href="#" style="float: right"><i class="small material-icons">perm_identity</i></a>
+</nav>
+
+<!-- Device View -->
+<div class="row device-view">
+    <div class="col s12">
+        <ul class="tabs">
+            <li class="tab col s3"><a href="#test1">Device Info</a></li>
+            <li class="tab col s3"><a class="active" href="#test2">Child Devices</a></li>
+            <li class="tab col s3 "><a href="#test3">Health Check</a></li>
+            <li class="tab col s3"><a href="#test4">Monitoring</a></li>
+        </ul>
+    </div>
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+</div>
+
+<div class="typeview">
+    This is type view....
+</div>
+
+<div class="locationview">
+    This is locationview ....
+
+</div>
+
+<div class="serviceview">
+    This is serviceview view....
+
+</div>
+</body>
+</html>
