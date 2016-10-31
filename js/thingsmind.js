@@ -8,36 +8,33 @@ $('.button-collapse').sideNav({
 );
 $('.collapsible').collapsible();
 // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+var leftmenus = [".device-listing", ".device-monitoring", ".device-location", ".management-device", ".management-controlpanel",
+    ".management-monitoring", ".management-alarms", ".management-firmware", ".integration-listing"];
+
 $(document).ready(function(){
-    $('ul.tabs').tabs();
-    $(".deviceview").hide();
-    $(".managementview").hide();
-    $(".locationview").hide();
-    $(".integrationview").hide();
+    leftmenus.forEach(function(entry) {
+        var viewname = entry + "-view";
+        $(viewname).hide();
+    });
 });
 
+$(document).ready(function(){
+    leftmenus.forEach(function(entry) {
+        $(entry).click(function() {
+            var viewname = entry + "-view";
+            showOnlyThisDiv(viewname);
+        });
+    });
+});
 
-$("#device").click(function() {
-    $(".locationview").hide();
-    $(".integrationview").hide();
-    $(".managementview").hide();
-    $(".deviceview").show();
-});
-$("#type").click(function() {
-    $(".deviceview").hide();
-    $(".locationview").hide();
-    $(".integrationview").hide();
-    $(".managementview").show();
-});
-$("#location").click(function() {
-    $(".deviceview").hide();
-    $(".integrationview").hide();
-    $(".managementview").hide();
-    $(".locationview").show();
-});
-$("#service").click(function() {
-    $(".deviceview").hide();
-    $(".managementview").hide();
-    $(".locationview").hide();
-    $(".integrationview").show();
-});
+function showOnlyThisDiv(divname) {
+    leftmenus.forEach(function(entry) {
+        var viewname = entry + "-view";
+
+        if (viewname != divname) {
+            $(viewname).hide();
+        }
+    });
+    $(divname).show();
+}
+
