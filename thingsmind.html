@@ -19,6 +19,7 @@
                 }
         );
         $('.collapsible').collapsible();
+
     }//]]>
 
     </script>
@@ -29,41 +30,40 @@
     <a href="#" id="logo-container"
        class="brand-logo"><img src="img/logo.png" style="height: 55px; padding-left: 20px; padding-top: 10px"/></a>
     <ul id="slide-out" class="side-nav fixed pull-nav-bar">
-        <!--<li class="bold"><a href="#!" class="waves-effect waves-teal">First Sidebar Link</a></li>
+        <!--<li class="bold"><a href="#!" class="waves-effect waves-blue">First Sidebar Link</a></li>
         <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>-->
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header waves-effect waves-teal active">Device
+                    <a class="device collapsible-header waves-effect waves-blue active">Device
                         <i class="material-icons">perm_device_information</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="#!"><i class="material-icons">view_list</i>Listing</a></li>
-                            <li><a href="#!"><i class="material-icons">equalizer</i>Monitoring</a></li>
-                            <li><a href="#!"><i class="material-icons">location_on</i>Locations</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">view_list</i>Listing</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">equalizer</i>Monitoring</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">location_on</i>Locations</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a class="collapsible-header waves-effect waves-teal active">Management
+                    <a class="management collapsible-header waves-effect waves-blue active">Management
                         <i class="material-icons">settings</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="#!"><i class="material-icons">phonelink_setup</i>Device</a></li>
-                            <li><a href="#!"><i class="material-icons">perm_scan_wifi</i>Control Panel</a></li>
-                            <li><a href="#!"><i class="material-icons">assessment</i>Monitoring</a></li>
-                            <li><a href="#!"><i class="material-icons">add_alert</i>Alarms</a></li>
-                            <li><a href="#!"><i class="material-icons">shopping_basket</i>Firmware Repository</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">phonelink_setup</i>Device</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">perm_scan_wifi</i>Control Panel</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">assessment</i>Monitoring</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">add_alert</i>Alarms</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">shopping_basket</i>Firmware</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <a class="collapsible-header waves-effect waves-teal active">Integration
+                    <a class="integration collapsible-header waves-effect waves-blue active">Integration
                         <i class="material-icons">call_made</i></a>
                     <div class="collapsible-body">
                         <ul>
-                            <li><a href="#!"><i class="material-icons">view_list</i>Listing</a></li>
-                            <li><a href="#!"><i class="material-icons">playlist_add</i>Add New</a></li>
+                            <li><a href="#!"><i class="material-icons thingsmind-icons">view_list</i>Listing</a></li>
                         </ul>
                     </div>
                 </li>
@@ -71,12 +71,16 @@
         </li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <a href="#" style="float: right"><i class="small material-icons">perm_identity</i></a>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="#!"><i class="material-icons">search</i></a></li>
+        <li><a href="#!"><i class="material-icons">perm_identity</i></a></li>
+        <li><a href="login.html"><i class="material-icons">power_settings_new</i></a></li>
+    </ul>
 </nav>
 
 <!-- Device View -->
 <div class="row device-view">
-    <div class="col s12">
+    <div class="col s10">
         <ul class="tabs">
             <li class="tab col s3"><a href="#test1">Device Info</a></li>
             <li class="tab col s3"><a class="active" href="#test2">Child Devices</a></li>
