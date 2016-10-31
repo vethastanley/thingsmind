@@ -22,6 +22,8 @@ $(document).ready(function(){
             $(viewname).show();
         });
     });
+
+    $(".device-listing-view").show();
 });
 
 function hideAll(menus) {
