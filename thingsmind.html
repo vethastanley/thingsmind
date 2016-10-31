@@ -7,6 +7,7 @@
     <title>ThingsMind</title>
     <meta name="viewport" content="width=1800px, initial-scale=1">
     <link href="css/materialize.css" rel="stylesheet" >
+    <!--<link href="css/ghpages-materialize.css" rel="stylesheet" >-->
     <link href="css/thingsmind.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/jquery-2.1.1.min.js"></script>
@@ -79,52 +80,87 @@
 </nav>
 
 <!-- Device View -->
-<div class="row device-listing-view">
-    <div class="col s10">
+<div class="row thingsmind-container">
+<div class="col s12 device-listing-view">
+    <div>
         <ul class="tabs">
-            <li class="tab col s3"><a href="#test1">Device Info</a></li>
-            <li class="tab col s3"><a class="active" href="#test2">Child Devices</a></li>
-            <li class="tab col s3 "><a href="#test3">Health Check</a></li>
-            <li class="tab col s3"><a href="#test4">Monitoring</a></li>
+            <li class="tab"><a href="#test1">Device Info</a></li>
+            <li class="tab"><a class="active" href="#test2">Child Devices</a></li>
+            <li class="tab"><a href="#test3">Health Check</a></li>
+            <li class="tab"><a href="#test4">Monitoring</a></li>
         </ul>
     </div>
-    <div id="test1" class="col s12">Test 1</div>
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test3" class="col s12">Test 3</div>
-    <div id="test4" class="col s12">Test 4</div>
+    <div id="test1">Test 1</div>
+    <div id="test2">Test 2</div>
+    <div id="test3">Test 3</div>
+    <div id="test4">Test 4</div>
 </div>
 
-<div class="device-monitoring-view">
+<div class="col s12 device-monitoring-view">
     This is device-monitoring view............................................................................
 </div>
 
-<div class="device-location-view">
+<div class="col s12 device-location-view">
     This is device-location ................................................................................
 </div>
 
-<div class="management-device-view">
-    This is management-device view...................................................................................................
+<div class="col s12 management-device-view">
+    <div class="row">
+        <div class="col s12">
+            <h3 class="header">Device Type</h3>
+        </div>
+        <div class="col s10 center-align">
+            <table>
+                <thead>
+                <tr>
+                    <th data-field="id">Name</th>
+                    <th data-field="name">Item Name</th>
+                    <th data-field="price">Item Price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                </tr>
+                <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>$3.76</td>
+                </tr>
+                <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>$7.00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
-<div class="management-controlpanel-view">
+<div class="col s12 management-controlpanel-view">
     This is management-controlpanel view.............................................................
 </div>
 
-<div class="management-monitoring-view">
+<div class="col s12 management-monitoring-view">
     This is management-monitoring view................................................................................
 </div>
 
-<div class="management-alarms-view">
+<div class="col s12 management-alarms-view">
     This is management-alarms view..........................................
 </div>
 
-<div class="management-firmware-view">
+<div class="col s12 management-firmware-view">
     This is management-firmware view................................................................................
 </div>
 
-<div class="integration-listing-view">
+<div class="col s12 integration-listing-view">
     This is integration-listing view....
 </div>
 
+</div>
 </body>
 </html>
