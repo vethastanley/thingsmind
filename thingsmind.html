@@ -13,8 +13,8 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/thingsmind.js"></script>
-    <script src="js/charts.js"></script>
-    <script src="js/init.js"></script>
+    <!--<script src="js/charts.js"></script>-->
+    <!--<script src="js/init.js"></script>-->
     <!--<script src="js/highcharts.js"></script>
     <script src="js/highcharts-more.js"></script>
     <script src="js/solid-gauge.js"></script>
@@ -263,6 +263,17 @@
     </div>
 
     <div class="col s12 device-monitoring-view">
+
+        <div class="row">
+            <div class="col s12">
+                <h3 class="red-text text-lighten-2">Device Monitoring</h3>
+            </div>
+            <div id="monitoring-container">
+                <iframe src="cpu-usage-chart.htm" width="350px" height="250px"></iframe>
+
+                <iframe src="memory-usage-chart.htm" width="350px" height="250px"></iframe>
+            </div>
+        </div>
 <!--
         <div class="row">
             <div class="col s12 m6">
@@ -307,6 +318,14 @@
 
     <div class="col s12 device-location-view">
         <!--<iframe src="https://www.google.com/maps/d/embed?mid=1W-mTacrI-N1skRnuV6JKqbjjVjA" width="640" height="480"></iframe>-->
+        <div class="row">
+            <div class="col s12">
+                <h3 class="red-text text-lighten-2">Device Locations</h3>
+            </div>
+            <div id="map-container">
+                <iframe src="map.htm" width="700" height="550"></iframe>
+            </div>
+        </div>
     </div>
 
     <div class="col s12 management-device-view">
@@ -536,6 +555,24 @@
             <div id="container-pie-current-status col s4" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
             <div id="container-historical-cpu-usage col s4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
         </div>-->
+        <div class="row">
+            <div class="col s12">
+                <h3 class="red-text text-lighten-2">Historical CPU Usage Chart</h3>
+            </div>
+            <div id="history-cpu-container">
+                <iframe src="historical-cpu-usage-chart.htm"  height="450px" width="400" frameborder="1" name="historical-cpu-usage-chart" ></iframe>
+            </div>
+
+            <br/>
+
+            <div class="col s12">
+                <h3 class="red-text text-lighten-2">Historical CPU Usage Chart</h3>
+            </div>
+            <div id="device-status">
+                <iframe src="device-status-pie-chart.htm" width="700px" height="500px"></iframe>
+            </div>
+        </div>
+
     </div>
 
     <div class="col s12 management-alarms-view">
