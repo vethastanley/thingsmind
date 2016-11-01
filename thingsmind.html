@@ -7,73 +7,65 @@
     <title>ThingsMind</title>
     <meta name="viewport" content="width=1800px, initial-scale=1">
     <link href="css/materialize.css" rel="stylesheet" >
-    <!--<link href="css/ghpages-materialize.css" rel="stylesheet" >-->
     <link href="css/thingsmind.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/thingsmind.js"></script>
-    <!--<script src="js/charts.js"></script>-->
-    <!--<script src="js/init.js"></script>-->
-    <!--<script src="js/highcharts.js"></script>
-    <script src="js/highcharts-more.js"></script>
-    <script src="js/solid-gauge.js"></script>
-    <script src="js/exporting.js"></script>-->
 </head>
 <body>
 <!-- Left Navigation and Header -->
-<nav class="blue">
-    <a href="#" id="logo-container"
-       class="brand-logo"><img src="img/logo.png" style="height: 55px; padding-left: 20px; padding-top: 10px"/></a>
-    <ul id="slide-out" class="side-nav fixed pull-nav-bar">
-        <!--<li class="bold"><a href="#!" class="waves-effect waves-blue">First Sidebar Link</a></li>
-        <li class="bold"><a href="#!" class="">Second Sidebar Link</a></li>-->
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-                <li>
-                    <a class="device collapsible-header waves-effect waves-blue active device-listing">Device
-                        <i class="material-icons">perm_device_information</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#!" class="device-listing"><i class="material-icons thingsmind-icons">view_list</i>Listing</a></li>
-                            <li><a href="#!" class="device-monitoring"><i class="material-icons thingsmind-icons">equalizer</i>Monitoring</a></li>
-                            <li><a href="#!" class="device-location"><i class="material-icons thingsmind-icons ">location_on</i>Locations</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a class="management collapsible-header waves-effect waves-blue active management-device">Management
-                        <i class="material-icons">settings</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#!" class="management-device"><i class="material-icons thingsmind-icons ">phonelink_setup</i>Device</a></li>
-                            <li><a href="#!" class="management-controlpanel"><i class="material-icons thingsmind-icons ">perm_scan_wifi</i>Control Panel</a></li>
-                            <li><a href="#!" class="management-monitoring"><i class="material-icons thingsmind-icons ">assessment</i>Monitoring</a></li>
-                            <li><a href="#!" class="management-alarms"><i class="material-icons thingsmind-icons ">add_alert</i>Alarms</a></li>
-                            <li><a href="#!" class="management-firmware"><i class="material-icons thingsmind-icons ">shopping_basket</i>Firmware</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a class="integration collapsible-header waves-effect waves-blue active integration-listing">Integration
-                        <i class="material-icons">call_made</i></a>
-                    <div class="collapsible-body">
-                        <ul>
-                            <li><a href="#!" class="integration-listing"><i class="material-icons thingsmind-icons ">view_list</i>Listing</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <ul class="right hide-on-med-and-down">
-        <li><a href="#!"><i class="material-icons">search</i></a></li>
-        <li><a href="#!"><i class="material-icons">perm_identity</i></a></li>
-        <li><a href="login.html"><i class="material-icons">power_settings_new</i></a></li>
-    </ul>
-</nav>
-
+<div class="navbar-fixed">
+    <nav class="blue">
+        <a href="#" id="logo-container"
+           class="brand-logo"><img src="img/logo.png" style="height: 55px; padding-left: 20px; padding-top: 10px"/></a>
+        <ul id="slide-out" class="side-nav fixed pull-nav-bar">
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="device collapsible-header waves-effect waves-blue active device-listing">Device
+                            <i class="material-icons">perm_device_information</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" class="device-listing"><i class="material-icons thingsmind-icons">view_list</i>Listing</a></li>
+                                <li><a href="#!" class="device-monitoring"><i class="material-icons thingsmind-icons">equalizer</i>Monitoring</a></li>
+                                <li><a href="#!" class="device-location"><i class="material-icons thingsmind-icons ">location_on</i>Locations</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="management collapsible-header waves-effect waves-blue active management-device">Management
+                            <i class="material-icons">settings</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" class="management-device"><i class="material-icons thingsmind-icons ">phonelink_setup</i>Device</a></li>
+                                <li><a href="#!" class="management-controlpanel"><i class="material-icons thingsmind-icons ">perm_scan_wifi</i>Control Panel</a></li>
+                                <li><a href="#!" class="management-monitoring"><i class="material-icons thingsmind-icons ">assessment</i>Monitoring</a></li>
+                                <li><a href="#!" class="management-alarms"><i class="material-icons thingsmind-icons ">add_alert</i>Alarms</a></li>
+                                <li><a href="#!" class="management-firmware"><i class="material-icons thingsmind-icons ">shopping_basket</i>Firmware</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="integration collapsible-header waves-effect waves-blue active integration-listing">Integration
+                            <i class="material-icons">call_made</i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#!" class="integration-listing"><i class="material-icons thingsmind-icons ">view_list</i>Listing</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#!"><i class="material-icons">search</i></a></li>
+            <li><a href="#!"><i class="material-icons">perm_identity</i></a></li>
+            <li><a href="login.html"><i class="material-icons">power_settings_new</i></a></li>
+        </ul>
+    </nav>
+</div>
 <!-- Device View -->
 <div class="row thingsmind-container">
 
