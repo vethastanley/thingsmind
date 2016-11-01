@@ -113,29 +113,154 @@
                         <td><i class="material-icons" style="color: red">trending_down</i></td>
                         <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
                     </tr>
+                    <tr class="mountroad">
+                        <td>ParkingPi Mount</td>
+                        <td>SHDVB31</td>
+                        <td><i class="material-icons" style="color: green">done</i></td>
+                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                    </tr>
+                    <tr class="satyams">
+                        <td>ParkingPi Satyams</td>
+                        <td>SHDVB31</td>
+                        <td><i class="material-icons" style="color: red">trending_down</i></td>
+                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                    </tr>
                     </tbody>
                 </table>
+                <ul class="pagination right">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
             </div>
         </div>
     </div>
 
     <!-- One Device view -->
     <div class="col s12 one-device-view">
-        <div>
-            <ul class="tabs">
-                <li class="tab"><a class="active one-device-info">Device Info</a></li>
-                <li class="tab"><a class="one-device-child" >Child Devices</a></li>
-                <li class="tab"><a class="one-device-healthcheck">Health Check</a></li>
-                <li class="tab"><a class="one-device-monitor">Monitoring</a></li>
-            </ul>
+        <div class="row">
+            <div class="col s12">
+                <h3 class="header">Parking Pi</h3>
+            </div>
+            <div class="col s12">&nbsp;</div>
+            <div class="col s12">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header active"><i class="material-icons">info_outline</i>Device Info</div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s12">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col s1">&nbsp;</div>
+                                <div class="col s10">
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                            <input id="attribute1" type="text"  class="validate" value="Serial Number">
+                                            <label for="attribute1" class="active">Attribute Name</label>
+                                        </div>
+                                        <div class="col s1">&nbsp;&nbsp;</div>
+                                        <div class="col s4">
+                                            <label>Materialize Select</label>
+                                            <select>
+                                                <option value="" disabled selected>Select Fruit</option>
+                                                <option value="1">Mango</option>
+                                                <option value="2">Orange</option>
+                                                <option value="3">Apple</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                            <input id="attribute2" type="text"  class="validate" value="CMMI Number">
+                                            <label for="attribute2" class="active">Attribute Name</label>
+                                        </div>
+                                        <div class="col s1">&nbsp;&nbsp;</div>
+                                        <div class="input-field col s4">
+                                            <select id="attribute_type2">
+                                                <option value="" disabled selected>Choose Attribute Type</option>
+                                                <option value="1">Number</option>
+                                                <option value="2">Text</option>
+                                                <option value="3">Random</option>
+                                            </select>
+                                            <label for="attribute_type2">Attribute Type</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                            <input id="attribute3" type="text"  class="validate" value="Auth Code">
+                                            <label for="attribute3" class="active">Attribute Name</label>
+                                        </div>
+                                        <div class="col s1">&nbsp;&nbsp;</div>
+                                        <div class="input-field col s4">
+                                            <select id="attribute_type3">
+                                                <option value="" disabled selected>Choose Attribute Type</option>
+                                                <option value="1">Number</option>
+                                                <option value="2">Text</option>
+                                                <option value="3">Random</option>
+                                            </select>
+                                            <label for="attribute_type3">Attribute Type</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s4">
+                                            <input id="attribute4" type="text"  class="validate"
+                                                   value="Manufactured Date">
+                                            <label for="attribute4" class="active">Attribute Name</label>
+                                        </div>
+                                        <div class="col s1">&nbsp;&nbsp;</div>
+                                        <div class="input-field col s4">
+                                            <select id="attribute_type4">
+                                                <option value="" disabled selected>Choose Attribute Type</option>
+                                                <option value="1">Number</option>
+                                                <option value="2">Text</option>
+                                                <option value="3">Random</option>
+                                            </select>
+                                            <label for="attribute_type4">Attribute Type</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <a class="btn-floating btn-large waves-effect waves-light right"><i class="material-icons">add</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s1">&nbsp;</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">settings_cell</i>Child Devices</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">star</i>Health Check</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">assessment</i>Monitoring</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">perm_scan_wifi</i>Control Panel</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">play_for_work</i>Firmware and Software</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">dashboard</i>Analytics</div>
+                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
+            </div>
         </div>
-
     </div>
-
-    <div id="one-device-info-view" style="display: none">Test 1</div>
-    <div id="one-device-child-view" style="display: none">Test 2</div>
-    <div id="one-device-healthcheck-view" style="display: none">Test 3</div>
-    <div id="one-device-monitor-view" style="display: none">Test 4</div>
 
     <div class="col s12 device-monitoring-view">
 <!--
