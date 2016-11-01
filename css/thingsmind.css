@@ -9,3 +9,13 @@
     margin-left: 242px;
     background-color: #FCFCFC;
 }
+
+.thingsmind-type {
+    height: 18px;
+    width: 15px;
+    vertical-align: top;
+}
+
+.device-listing-view td {
+    cursor: pointer;
+}

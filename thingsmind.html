@@ -20,43 +20,11 @@
         <a href="#" id="logo-container"
            class="brand-logo"><img src="img/logo.png" style="height: 55px; padding-left: 20px; padding-top: 10px"/></a>
         <ul id="slide-out" class="side-nav fixed pull-nav-bar">
-            <li class="no-padding">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="device collapsible-header waves-effect waves-blue active device-listing">Device
-                            <i class="material-icons">perm_device_information</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#!" class="device-listing"><i class="material-icons thingsmind-icons">view_list</i>Listing</a></li>
-                                <li><a href="#!" class="device-monitoring"><i class="material-icons thingsmind-icons">equalizer</i>Monitoring</a></li>
-                                <li><a href="#!" class="device-location"><i class="material-icons thingsmind-icons ">location_on</i>Locations</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="management collapsible-header waves-effect waves-blue active management-device">Management
-                            <i class="material-icons">settings</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#!" class="management-device"><i class="material-icons thingsmind-icons ">phonelink_setup</i>Device</a></li>
-                                <li><a href="#!" class="management-controlpanel"><i class="material-icons thingsmind-icons ">perm_scan_wifi</i>Control Panel</a></li>
-                                <li><a href="#!" class="management-monitoring"><i class="material-icons thingsmind-icons ">assessment</i>Monitoring</a></li>
-                                <li><a href="#!" class="management-alarms"><i class="material-icons thingsmind-icons ">add_alert</i>Alarms</a></li>
-                                <li><a href="#!" class="management-firmware"><i class="material-icons thingsmind-icons ">shopping_basket</i>Firmware</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="integration collapsible-header waves-effect waves-blue active integration-listing">Integration
-                            <i class="material-icons">call_made</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="#!" class="integration-listing"><i class="material-icons thingsmind-icons ">view_list</i>Listing</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
+            <li><a href="#!" class="device-listing"><i class="material-icons thingsmind-icons">view_list</i>Device Management</a></li>
+            <li><a href="#!" class="management-device"><i class="material-icons thingsmind-icons ">phonelink_setup
+            </i>Device Type Config</a></li>
+            <li><a href="#!" class="management-alarms"><i class="material-icons thingsmind-icons ">add_alert</i>Manage Alarms</a></li>
+            <li><a href="#!" class="management-firmware"><i class="material-icons thingsmind-icons ">shopping_basket</i>Firmware Repository</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
@@ -68,95 +36,65 @@
 </div>
 <!-- Device View -->
 <div class="row thingsmind-container">
-
-    <!-- Device Listing View -->
     <div class="col s12 device-listing-view">
         <div class="row">
             <div class="col s12">
-                <h3 class="red-text text-lighten-2">Devices</h3>
+                <h3 class="red-text text-lighten-2">On-Boarded Devices</h3>
             </div>
             <div class="col s12 center-align">
                 <table class="devices-table highlight">
                     <thead>
                     <tr>
-                        <th data-field="id">Device Name</th>
-                        <th data-field="type">Type</th>
-                        <th data-field="name">Serial No.</th>
-                        <th data-field="date">Date</th>
+                        <th data-field="id">Name</th>
+                        <th data-field="date">Onboarded Date</th>
                         <th data-field="price">Status</th>
-                        <th data-field="view">View</th>
-
                     </tr>
                     </thead>
 
                     <tbody>
-                    <tr >
-                        <td>ParkingPi BazullahRd</td>
-                        <td>Raspberry Pi</td>
-                        <td>WAHGE72</td>
+                    <tr class="Chennai one-device">
+                        <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Chennai</td>
                         <td>16Sep-16</td>
-                        <td><i class="material-icons" style="color: green">done</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons">visibility</i></a></td>
+                        <td><i class="material-icons green-text text-darken-2">done</i></td>
                     </tr>
-                    <tr class="BoagRd">
-                        <td>ParkingPi BoagRd</td>
-                        <td>Raspberry Pi</td>
-                        <td>JAHDV12</td>
+                    <tr class="Mumbai one-device">
+                        <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Mumbai</td>
                         <td>09Oct-16</td>
-                        <td><i class="material-icons" style="color: green">done</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons">visibility</i></a></td>
+                        <td><i class="material-icons green-text text-darken-2">done</i></td>
                     </tr>
-                    <tr class="Kellys">
-                        <td>ParkingPi Kellys</td>
-                        <td>Arduino</td>
-                        <td>SHDVB31</td>
+                    <tr class="Calcutta one-device">
+                        <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Calcutta</td>
                         <td>09Oct-16</td>
-                        <td><i class="material-icons" style="color: red">trending_down</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                        <td><i class="material-icons red-text">trending_down</i></td>
                     </tr>
-                    <tr class="mountroad">
-                        <td>ParkingPi Mount</td>
-                        <td>Arduino</td>
-                        <td>SHDVB31</td>
+                    <tr class="Delhi one-device">
+                        <td><img src="img/arduino.png" class="thingsmind-type"/>parkingpi@Delhi</td>
                         <td>12Oct-16</td>
-                        <td><i class="material-icons" style="color: green">done</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                        <td><i class="material-icons green-text text-darken-2">done</i></td>
                     </tr>
-                    <tr class="satyams">
-                        <td>ParkingPi Satyams</td>
-                        <td>Raspberry Pi</td>
-                        <td>SHDVB31</td>
+                    <tr class="Bangalore one-device">
+                        <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Bangalore</td>
                         <td>15Oct-16</td>
-                        <td><i class="material-icons" style="color: red">trending_down</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
-                    </tr>
-                    <tr class="agarwalroad">
-                        <td>ParkingPi Agarwals</td>
-                        <td>Arduino</td>
-                        <td>SHDVB31</td>
-                        <td>21Oct-16</td>
-                        <td><i class="material-icons" style="color: green">done</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
-                    </tr>
-                    <tr class="royapettah">
-                        <td>ParkingPi Royapettah</td>
-                        <td>Arduino</td>
-                        <td>SHDVB31</td>
-                        <td>29Oct-16</td>
-                        <td><i class="material-icons" style="color: green">done</i></td>
-                        <td><a href="#!" class="one-device"><i class="material-icons" >visibility</i></a></td>
+                        <td><b><i class="material-icons green-text text-darken-2">done</i></b></td>
                     </tr>
                     </tbody>
                 </table>
-                <ul class="pagination right">
-                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#!">1</a></li>
-                    <li class="waves-effect"><a href="#!">2</a></li>
-                    <li class="waves-effect"><a href="#!">3</a></li>
-                    <li class="waves-effect"><a href="#!">4</a></li>
-                    <li class="waves-effect"><a href="#!">5</a></li>
-                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-                </ul>
+                <div class="fixed-action-btn">
+                    <a class="tooltipped btn-floating btn-large red">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul>
+                        <li><a class="tooltipped device-update btn-floating green"
+                               data-position="left" data-tooltip="Firmware Upgrade"><i
+                                class="material-icons">system_update_alt</i></a></li>
+                        <li><a class="tooltipped device-location btn-floating red"
+                               data-position="left" data-tooltip="Location"><i
+                                class="material-icons">navigation</i></a></li>
+                        <li><a class="tooltipped device-monitoring btn-floating blue"
+                               data-position="left" data-tooltip="Monitoring"><i
+                                class="material-icons">insert_chart</i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -165,7 +103,7 @@
     <div class="col s12 one-device-view">
         <div class="row">
             <div class="col s12">
-                <h3 class="header">Parking Pi</h3>
+                <h3 class="red-text text-lighten-2">Device Shadow</h3>
             </div>
             <div class="col s12">&nbsp;</div>
             <div class="col s12">
@@ -259,10 +197,6 @@
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">star</i>Health Check</div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                    </li>
-                    <li>
                         <div class="collapsible-header"><i class="material-icons">assessment</i>Monitoring</div>
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
@@ -275,7 +209,7 @@
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">dashboard</i>Analytics</div>
+                        <div class="collapsible-header"><i class="material-icons">navigation</i>Location</div>
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
                 </ul>
@@ -283,6 +217,7 @@
         </div>
     </div>
 
+    <!-- Device Monitoring View -->
     <div class="col s12 device-monitoring-view">
 
         <div class="row">
@@ -299,50 +234,9 @@
                 <iframe src="network-speed-responsive-chart.htm" width="800px" height="320px"></iframe>
             </div>
         </div>
-<!--
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card medium">
-                    <div class="card-image">
-                        &lt;!&ndash; <img src="images/sample-1.jpg"> &ndash;&gt;
-                        <div style="width: 600px; height: 400px; margin: 0 auto">
-                            <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
-                        </div>
-                        &lt;!&ndash; <span class="card-title">CPU Usage</span> &ndash;&gt;
-                    </div>
-                    &lt;!&ndash;<div class="card-content">
-                        <p>I can reboot your remote Raspberry PI device.</p>
-                    </div>&ndash;&gt;
-                    &lt;!&ndash; <div class="card-action">
-                      <a href="#">Reboot device</a>
-                    </div> &ndash;&gt;
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card medium">
-                    <div class="card-image">
-                        &lt;!&ndash; <img src="images/sample-1.jpg"> &ndash;&gt;
-                        <div style="width: 600px; height: 400px; margin: 0 auto">
-                            <div id="container-rpm" style="width: 300px; height: 200px; float: left"></div>
-                        </div>
-                        &lt;!&ndash; <span class="card-title">Memory Usage</span> &ndash;&gt;
-                    </div>
-                    &lt;!&ndash;<div class="card-content">
-                        <p>I can reboot your remote Raspberry PI device.</p>
-                    </div>&ndash;&gt;
-                    &lt;!&ndash; <div class="card-action">
-                      <a href="#">Reboot device</a>
-                    </div> &ndash;&gt;
-                </div>
-            </div>
-        </div>-->
     </div>
 
     <div class="col s12 device-location-view">
-        <!--<iframe src="https://www.google.com/maps/d/embed?mid=1W-mTacrI-N1skRnuV6JKqbjjVjA" width="640" height="480"></iframe>-->
         <div class="row">
             <div class="col s12">
                 <h3 class="red-text text-lighten-2">Device Locations</h3>
@@ -358,7 +252,7 @@
     <div class="col s12 management-device-view">
         <div class="row">
             <div class="col s12">
-                <h3 class="red-text text-lighten-2"></h3>
+                <h3 class="red-text text-lighten-2">Available Device Types</h3>
             </div>
             <div class="col s12">&nbsp;</div>
             <div class="col s12">
@@ -442,15 +336,6 @@
                     <li class="waves-effect"><a href="#!">5</a></li>
                     <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
                 </ul>
-            </div>
-        </div>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
         </div>
     </div>
@@ -553,14 +438,6 @@
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">assessment</i>Monitoring</div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><i class="material-icons">perm_scan_wifi</i>Control Panel</div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-                    </li>
-                    <li>
                         <div class="collapsible-header"><i class="material-icons">play_for_work</i>Firmware and Software</div>
                         <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                     </li>
@@ -585,10 +462,6 @@
     </div>
 
     <div class="col s12 management-monitoring-view">
-        <!--<div class="row">
-            <div id="container-pie-current-status col s4" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-            <div id="container-historical-cpu-usage col s4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-        </div>-->
         <div class="row">
             <div class="col s12">
                 <h3 class="red-text text-lighten-2">Historical CPU Usage Chart</h3>
@@ -617,9 +490,10 @@
         This is management-firmware view................................................................................
     </div>
 
-    <div class="col s12 integration-listing-view">
-        This is integration-listing view....
+    <div class="col s12 device-update-view">
+        This is the Device Update View........................................................
     </div>
+
 </div>
 </body>
 </html>
