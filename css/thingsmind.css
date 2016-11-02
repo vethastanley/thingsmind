@@ -19,3 +19,8 @@
 .device-listing-view td {
     cursor: pointer;
 }
+
+.force-down {
+    position: absolute;
+    top: 13px;
+}
