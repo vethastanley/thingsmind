@@ -18,7 +18,8 @@ $(function () {
             type: 'pie'
         },
         title: {
-            text: 'Device current status'
+//            text: 'Device current status'
+            text: '<span style="font-size: 25px; color: dodgerblue">Device current status</span>'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -31,7 +32,8 @@ $(function () {
                     enabled: true,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                     style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                        fontSize: 16
                     }
                 }
             }
@@ -40,36 +42,49 @@ $(function () {
             name: 'Status metrics',
             colorByPoint: true,
             data: [{
-                name: 'Installed',
-                y: 24.03
-                
-                // name: 'Active',
-                // y: 56.33,
-                // sliced: true,
-                // selected: true
+                name: 'Active',
+                y: 80,
+                sliced: true,
+                selected: true,
+                color: 'limegreen'
             }, {
                 name: 'Shut down',
-                y: 4.77
-                // name: 'Installed',
-                // y: 24.03
+                y: 20,
+                color: 'orangered'
+            }]
+        }]
+//        dodgerblue
+        /*series: [{
+            name: 'Status metrics',
+            colorByPoint: true,
+            data: [{
+                name: 'Installed',
+//                y: 24.03
+                y: 0
             }, {
-                // name: 'In Progress',
-                // y: 10.38
+                name: 'Restarting',
+//                y: 4.77
+                y: 0
+            }, {
                 name: 'Active',
-                y: 56.33,
+//                y: 56.33,
+                y: 80,
                 sliced: true,
                 selected: true
             }, {
                 name: 'In Progress',
-                y: 10.38
+//                y: 10.38
+                y: 0
             }, {
                 name: 'Planned',
-                y: 0.91
+//                y: 0.91
+                y: 0
             }, {
-                name: 'Restarting',
-                y: 0.2
+                name: 'Shut down',
+//                y: 0.2
+                y: 20
             }]
-        }]
+        }]*/
     });
 });
 		</script>
