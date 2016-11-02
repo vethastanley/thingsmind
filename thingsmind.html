@@ -23,7 +23,6 @@
             <li><a href="#!" class="device-listing"><i class="material-icons thingsmind-icons">view_list</i>Device Management</a></li>
             <li><a href="#!" class="management-device"><i class="material-icons thingsmind-icons ">phonelink_setup
             </i>Device Type Config</a></li>
-            <li><a href="#!" class="management-alarms"><i class="material-icons thingsmind-icons ">add_alert</i>Manage Alarms</a></li>
             <li><a href="#!" class="management-firmware"><i class="material-icons thingsmind-icons ">shopping_basket</i>Firmware Repository</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -80,7 +79,7 @@
                     </tbody>
                 </table>
                 <div class="fixed-action-btn">
-                    <a class="tooltipped btn-floating btn-large red">
+                    <a class="btn-floating btn-large blue">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul>
@@ -90,7 +89,7 @@
                         <li><a class="tooltipped device-location btn-floating red"
                                data-position="left" data-tooltip="Location"><i
                                 class="material-icons">navigation</i></a></li>
-                        <li><a class="tooltipped device-monitoring btn-floating blue"
+                        <li><a class="tooltipped device-monitoring btn-floating yellow darken-3"
                                data-position="left" data-tooltip="Monitoring"><i
                                 class="material-icons">insert_chart</i></a></li>
                     </ul>
@@ -391,6 +390,22 @@
                 &nbsp;
             </div>
         </div>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large blue">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="tooltipped device-update btn-floating green"
+                       data-position="left" data-tooltip="Firmware Upgrade"><i
+                        class="material-icons">system_update_alt</i></a></li>
+                <li><a class="tooltipped device-location btn-floating red"
+                       data-position="left" data-tooltip="Location"><i
+                        class="material-icons">navigation</i></a></li>
+                <li><a class="tooltipped device-monitoring btn-floating yellow darken-3"
+                       data-position="left" data-tooltip="Monitoring"><i
+                        class="material-icons">insert_chart</i></a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="col s12 device-location-view">
@@ -424,6 +439,22 @@
                 <iframe src="charts/device-location-distribution-chart.htm" width="700px" height="520px"></iframe>
             </div>-->
         </div>
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large blue">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul>
+                <li><a class="tooltipped device-update btn-floating green"
+                       data-position="left" data-tooltip="Firmware Upgrade"><i
+                        class="material-icons">system_update_alt</i></a></li>
+                <li><a class="tooltipped device-location btn-floating red"
+                       data-position="left" data-tooltip="Location"><i
+                        class="material-icons">navigation</i></a></li>
+                <li><a class="tooltipped device-monitoring btn-floating yellow darken-3"
+                       data-position="left" data-tooltip="Monitoring"><i
+                        class="material-icons">insert_chart</i></a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="col s12 management-device-view">
@@ -434,7 +465,12 @@
             <div class="col s12">&nbsp;</div>
             <div class="col s12">
                 <ul class="collection">
-                    <li href="#!" class="collection-item">
+                    <li href="#!" class="collection-item avatar">
+                        <img src="img/rasp.png" alt="" class="circle">
+                        <span class="title">Raspberry Pi</span>
+                        <p>
+                            <p class="">
+                        </p>
                         <div>
                             Raspberry Pi
                             <a href="#modal1" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete&nbsp;&nbsp;</i></a>
@@ -650,10 +686,6 @@
             </div>-->
         </div>
 
-    </div>
-
-    <div class="col s12 management-alarms-view">
-        This is management-alarms view..........................................
     </div>
 
     <div class="col s12 management-firmware-view">
