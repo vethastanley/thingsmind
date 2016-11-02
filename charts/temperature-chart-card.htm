@@ -124,6 +124,13 @@ $(function () {
 
 });
 		</script>
+
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 	</head>
 	<body>
 <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -131,10 +138,33 @@ $(function () {
 
 <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 
-<div style="width: 320px; height: 210px; margin: 0 auto">
-    <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+
+<div class="row">
+    <div class="col m9">
+        <div class="card small">
+            <div class="card-image">
+                <!-- <img src="images/sample-1.jpg"> -->
+                <!--<div style="width: 600px; height: 400px; margin: 0 auto">
+                    <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+                </div>-->
+
+                <div style="width: 320px; height: 210px; margin: 0 auto">
+                    <div id="container-speed" style="width: 300px; height: 200px; float: left"></div>
+                </div>
+                <!-- <span class="card-title">CPU Usage</span> -->
+            </div>
+            <!--<div class="card-content">
+                <p>I can reboot your remote Raspberry PI device.</p>
+            </div>-->
+             <div class="card-action">
+              <a href="#">Temperature</a>
+            </div>
+        </div>
+    </div>
 </div>
 
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
 	</body>
 </html>

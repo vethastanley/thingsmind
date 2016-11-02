@@ -42,8 +42,8 @@ $(function () {
         yAxis: {
             stops: [
                 [0.1, '#55BF3B'], // green
-                [0.4, '#DDDF0D'], // yellow
-                [0.7, '#DF5353'] // red
+                [0.5, '#DDDF0D'], // yellow
+                [0.8, '#DF5353'] // red
             ],
             lineWidth: 0,
             minorTickInterval: null,
@@ -70,10 +70,10 @@ $(function () {
     // The speed gauge
     $('#container-speed').highcharts(Highcharts.merge(gaugeOptions, {
         yAxis: {
-            min: 30,
-            max: 90,
+            min: 0,
+            max: 10,
             title: {
-                text: 'Temperature'
+                text: 'Voltage'
             }
         },
 
@@ -86,8 +86,8 @@ $(function () {
             data: [80],
             dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
-                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'red') + '">{y}</span><br/>' +
-                       '<span style="font-size:16px;color:silver"> &deg;C</span></div>'
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'orange') + '">{y}</span><br/>' +
+                       '<span style="font-size:20px;color:silver"> &#9889;</span></div>'
             },
             tooltip: {
                 valueSuffix: ' '
@@ -108,14 +108,27 @@ $(function () {
 
         if (chart) {
             point = chart.series[0].points[0];
-            inc = Math.round((Math.random() - 0.5) * 70);
+//            inc = (Math.random() - 0.5).toFixed(1);
+            inc = Math.round((Math.random() - 0.2) * 10);//.toFixed(1);
+            point.y = 5;
             newVal = point.y + inc;
+//            newVal = (point.y + inc).toFixed(1);
 
-            if (newVal < 30 || newVal > 90) {
+            if (newVal < 0 || newVal > 10) {
                 newVal = point.y - inc;
+//                newVal = (point.y - inc).toFixed(1);
             }
 
+            if (newVal < 0) {
+                newVal = point.y;
+            }
+
+//            newVal = Highcharts.numberFormat(newVal, 1);
+//            alert(newVal);
+            /*newVal = newVal.toFixed(1);
+            alert(newVal);*/
             point.update(newVal);
+//            point.update(Highcharts.numberFormat(newVal, 1));
         }
 
 
