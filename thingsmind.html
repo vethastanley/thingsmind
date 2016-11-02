@@ -198,7 +198,61 @@
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">assessment</i>Monitoring</div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s12">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+
+                                <div class="col s3">
+                                    <div id="cpu-usage-container">
+                                        <!--<iframe src="cpu-usage-chart.htm" width="350px" height="250px"></iframe>-->
+                                        <iframe src="cpu-usage-chart.htm" width="340px" height="235px" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col s3">
+                                    <div id="memory-usage-container">
+                                        <iframe src="memory-usage-chart.htm" width="340px" height="235px" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col s3">
+                                    <div id="temperature-container">
+                                        <iframe src="temperature-chart.htm" width="340px" height="235px" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+
+                                <div class="col s4">
+                                    <div id="signal-strength-live-container">
+                                        <iframe src="signal-strength-live-update.htm" width="700px" height="450px"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                                <!--<iframe src="network-speed-responsive-chart.htm" width="800px" height="320px"></iframe>-->
+                        </div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">perm_scan_wifi</i>Control Panel</div>
@@ -211,7 +265,6 @@
 
                             <!--<p align="left">To control Raspberry PI remotely.</p>-->
                             <div class="row">
-
                                 <div class="col s1">
                                     &nbsp;
                                 </div>
@@ -280,7 +333,7 @@
                                     &nbsp;
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col s1">
                                     &nbsp;
@@ -314,13 +367,7 @@
                 <h3 class="red-text text-lighten-2">Device Monitoring</h3>
             </div>
             <div id="monitoring-container">
-                <iframe src="cpu-usage-chart.htm" width="350px" height="250px"></iframe>
 
-                <iframe src="memory-usage-chart.htm" width="350px" height="250px"></iframe>
-
-                <iframe src="signal-strength-live-update.htm" width="700px" height="450px"></iframe>
-
-                <iframe src="network-speed-responsive-chart.htm" width="800px" height="320px"></iframe>
             </div>
         </div>
     </div>
