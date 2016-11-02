@@ -691,20 +691,12 @@
     <div class="col s12 management-firmware-view">
         <div class="row">
             <div class="col s12">
-                <h3 class="red-text text-lighten-2">Manage Firmware Repository</h3>
+                <h3 class="red-text text-lighten-2">Firmware Repository</h3>
             </div>
-        </div>
 
-        <div class="row">
             <div class="col s12">
                 &nbsp;
             </div>
-        </div>
-
-        <div class="row">
-            <!--<div class="col s1">
-                &nbsp;
-            </div>-->
 
             <div class="col s12">
                 <div id="firmware-repo-container">
@@ -715,32 +707,28 @@
                             <span class="title">Java</span>
                             <p>Java is a programming language and computing platform first released by Sun Microsystems in 1995.<br/>
                                 Version <span class="blue-text">8.111</span> Stable
-                                <!--<br>-->
-                                <!--Second Line-->
                             </p>
-                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-darken-2">delete</i></a>
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
                             <a href="#!" class="secondary-content"><i class="material-icons">mode_edit&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
                         </li>
                         <li class="collection-item avatar">
-                            <!--<i class="material-icons circle">folder</i>-->
                             <img src="img/python.png" alt="" class="circle">
                             <span class="title">Python</span>
                             <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. <br/>
                                 Version <span class="blue-text">3.5.2</span> Stable
                             </p>
-                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-darken-2">delete</i></a>
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
                             <a href="#!" class="secondary-content"><i class="material-icons">mode_edit&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
 
 
                         </li>
                         <li class="collection-item avatar">
-                            <!--<i class="material-icons circle">folder</i>-->
                             <img src="img/python.png" alt="" class="circle">
                             <span class="title">Python</span>
                             <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. <br/>
                                 Version <span class="blue-text">2.7.11</span> Stable
                             </p>
-                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-darken-2">delete</i></a>
+                            <a href="#!" class="secondary-content"><i class="material-icons red-text text-lighten-2">delete</i></a>
                             <a href="#!" class="secondary-content"><i class="material-icons">mode_edit&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
                         </li>
 
@@ -763,69 +751,69 @@
                     </ul>
 
 
-                    <!--<a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>-->
-
-
                     <div class="row right">
                         <a class="btn-floating btn-large waves-effect waves-light blue modal-trigger" data-target="modal1"><i class="material-icons">add</i></a>
-                        <!--<button data-target="modal1" class="btn modal-trigger">Modal</button>-->
                     </div>
+
+
                     <!-- Modal Structure -->
                     <div id="modal1" class="modal modal-fixed-footer">
                         <div class="modal-content">
-                            <h4>Add Artifact</h4>
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;Add Artifact</h4>
 
                             <div class="col s12">
                                 &nbsp;
                             </div>
-                            <div>
 
-                                <div class="row">
-                                    <form class="col s12">
-                                        <div class="row">
+                            <div class="row">
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+
+                                <div class="col s10">
+                                    <div class="row">
+                                        <form>
                                             <div class="input-field col s6">
                                                 <input id="last_name" type="text" class="validate">
                                                 <label for="name">Name</label>
                                             </div>
+
                                             <div class="input-field col s6">
                                                 <input id="last_name" type="text" class="validate">
                                                 <label for="last_name">Version</label>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
 
-                            </div>
-
-                            <div>
-                                <div class="row">
-                                    <form class="col s12">
-                                        <div class="row">
                                             <div class="input-field col s12">
                                                 <textarea id="textarea1" class="materialize-textarea"></textarea>
                                                 <label for="textarea1">Description</label>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
 
-
-                            <div>
-                                <form action="#">
-                                    <div class="file-field input-field">
-                                        <div class="btn">
-                                            <span>File</span>
-                                            <input type="file" multiple>
-                                        </div>
-                                        <div class="file-path-wrapper">
-                                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
-                            </div>
 
+                                    <div class="row">
+                                        <form action="#">
+                                            <div class="file-field input-field s12">
+                                                <div class="btn">
+                                                    <span>File</span>
+                                                    <input type="file" multiple>
+                                                </div>
+                                                <div class="file-path-wrapper">
+                                                    <input class="file-path validate" type="text"
+                                                           placeholder="Upload one or more files">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col s1">
+                                    &nbsp;
+                                </div>
+
+                            </div>
                         </div>
+
                         <div class="modal-footer">
                             <a href="#!" class="modal-action modal-close waves-effect waves-light btn">Add</a>
                             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
@@ -833,24 +821,14 @@
                     </div>
 
                     <script>
-                        $(document).ready(function() {
+                        $(document).ready(function () {
                             // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
                             $('.modal-trigger').leanModal();
                         });
                     </script>
                 </div>
             </div>
-
-            <!--<div class="col s1">
-                &nbsp;
-            </div>-->
         </div>
-
-        <!--<div class="row">
-            <div class="col s12">
-                &nbsp;
-            </div>
-        </div>-->
     </div>
 
     <div class="col s12 device-update-view">
