@@ -24,6 +24,17 @@ $(document).ready(function(){
     });
 
     $(".device-listing-view").show();
+
+    $(".tester").hide();
+    $(".tester1").click(function() {
+        $(".tester1-done").show();
+    });
+    $(".tester2").click(function() {
+        $(".tester2-done").show();
+    });
+    $(".tester3").click(function() {
+        $(".tester3-failed").show();
+    });
 });
 
 function hideAll(menus) {

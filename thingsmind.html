@@ -55,27 +55,27 @@
                     <tr class="Chennai one-device">
                         <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Chennai</td>
                         <td>16Sep-16</td>
-                        <td><i class="material-icons green-text text-darken-2">done</i></td>
+                        <td><i class="material-icons green-text text-darken-2">thumb_up</i></td>
                     </tr>
                     <tr class="Mumbai one-device">
                         <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Mumbai</td>
                         <td>09Oct-16</td>
-                        <td><i class="material-icons green-text text-darken-2">done</i></td>
+                        <td><i class="material-icons green-text text-darken-2">thumb_up</i></td>
                     </tr>
                     <tr class="Calcutta one-device">
                         <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Calcutta</td>
                         <td>09Oct-16</td>
-                        <td><i class="material-icons red-text">trending_down</i></td>
+                        <td><i class="material-icons red-text">thumb_down</i></td>
                     </tr>
                     <tr class="Delhi one-device">
                         <td><img src="img/arduino.png" class="thingsmind-type"/>parkingpi@Delhi</td>
                         <td>12Oct-16</td>
-                        <td><i class="material-icons green-text text-darken-2">done</i></td>
+                        <td><i class="material-icons green-text text-darken-2">thumb_up</i></td>
                     </tr>
                     <tr class="Bangalore one-device">
                         <td><img src="img/rasp.png" class="thingsmind-type"/>parkingpi@Bangalore</td>
                         <td>15Oct-16</td>
-                        <td><b><i class="material-icons green-text text-darken-2">done</i></b></td>
+                        <td><b><i class="material-icons green-text text-darken-2">thumb_up</i></b></td>
                     </tr>
                     </tbody>
                 </table>
@@ -119,67 +119,25 @@
                                 <div class="col s10">
                                     <div class="row">
                                         <div class="input-field col s4">
-                                            <input id="attribute1" type="text"  class="validate" value="Serial Number">
-                                            <label for="attribute1" class="active">Attribute Name</label>
+                                            <input id="attribute1" type="text"  class="validate" value="parkingpi@Chennai">
+                                            <label for="attribute1" class="active">Name</label>
                                         </div>
-                                        <div class="col s1">&nbsp;&nbsp;</div>
-                                        <div class="col s4">
-                                            <label>Materialize Select</label>
-                                            <select>
-                                                <option value="" disabled selected>Select Fruit</option>
-                                                <option value="1">Mango</option>
-                                                <option value="2">Orange</option>
-                                                <option value="3">Apple</option>
-                                            </select>
+                                        <div class="col s2">&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="input-field col s4">
+                                            <input id="attribute2" type="text"  class="validate" value="Raspberry Pi">
+                                            <label for="attribute2" class="active">Type</label>
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="input-field col s4">
-                                            <input id="attribute2" type="text"  class="validate" value="CMMI Number">
-                                            <label for="attribute2" class="active">Attribute Name</label>
+                                            <input id="attribute4" type="text"  class="validate" value="Chennai">
+                                            <label for="attribute4" class="active">Location</label>
                                         </div>
-                                        <div class="col s1">&nbsp;&nbsp;</div>
+                                        <div class="col s2">&nbsp;&nbsp;&nbsp;</div>
                                         <div class="input-field col s4">
-                                            <select id="attribute_type2">
-                                                <option value="" disabled selected>Choose Attribute Type</option>
-                                                <option value="1">Number</option>
-                                                <option value="2">Text</option>
-                                                <option value="3">Random</option>
-                                            </select>
-                                            <label for="attribute_type2">Attribute Type</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s4">
-                                            <input id="attribute3" type="text"  class="validate" value="Auth Code">
-                                            <label for="attribute3" class="active">Attribute Name</label>
-                                        </div>
-                                        <div class="col s1">&nbsp;&nbsp;</div>
-                                        <div class="input-field col s4">
-                                            <select id="attribute_type3">
-                                                <option value="" disabled selected>Choose Attribute Type</option>
-                                                <option value="1">Number</option>
-                                                <option value="2">Text</option>
-                                                <option value="3">Random</option>
-                                            </select>
-                                            <label for="attribute_type3">Attribute Type</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="input-field col s4">
-                                            <input id="attribute4" type="text"  class="validate"
-                                                   value="Manufactured Date">
-                                            <label for="attribute4" class="active">Attribute Name</label>
-                                        </div>
-                                        <div class="col s1">&nbsp;&nbsp;</div>
-                                        <div class="input-field col s4">
-                                            <select id="attribute_type4">
-                                                <option value="" disabled selected>Choose Attribute Type</option>
-                                                <option value="1">Number</option>
-                                                <option value="2">Text</option>
-                                                <option value="3">Random</option>
-                                            </select>
-                                            <label for="attribute_type4">Attribute Type</label>
+                                            <input id="attribute4" type="text"  class="validate" value="Raspberry Pi Foundation">
+                                            <label for="attribute4" class="active">Manufacturer</label>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -188,13 +146,42 @@
                                         </div>
                                     </div>
                                 </div>
+<!--
                                 <div class="col s1">&nbsp;</div>
+-->
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">settings_cell</i>Child Devices</div>
-                        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="collapsible-body">
+                            <div class="col s12">&nbsp; &nbsp;</div>
+                            <div class="col s12">&nbsp; &nbsp;</div>
+
+                            <div class="col s12">
+                                <ul class="collection col s10" style="margin-left: 8%;">
+                                    <li href="#!" class="collection-item">
+                                        <div>
+                                            Temperature Sensor
+                                            <a href="#modal1" class="secondary-content tester1" title="Test"><i class="material-icons text-lighten-2">assignment&nbsp;&nbsp;</i><i class="material-icons green-text text-darken-2 tester tester1-done">thumb_up&nbsp;&nbsp;</i></a>
+                                        </div>
+                                    </li>
+                                    <li href="#!" class="collection-item">
+                                        <div>
+                                            Distance Sensor
+                                            <a href="#!" class="secondary-content tester2" title="Test"><i class="material-icons text-lighten-2">assignment&nbsp;&nbsp;</i><i class="material-icons green-text text-darken-2 tester tester2-done">thumb_up&nbsp;&nbsp;</i></a>
+                                        </div></li>
+                                    <li href="#!" class="collection-item">
+                                        <div>
+                                            Green LED
+                                            <a href="#!" class="secondary-content tester3" title="Test"><i class="material-icons text-lighten-2">assignment&nbsp;&nbsp;</i><i class="material-icons tester red-text text-darken-2 tester3-failed">thumb_down&nbsp;&nbsp;</i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s12">&nbsp; &nbsp;</div>
+                            <div class="col s12">&nbsp; &nbsp;</div>
+                        </div>
                     </li>
                     <li>
                         <div class="collapsible-header"><i class="material-icons">assessment</i>Monitoring</div>
